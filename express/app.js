@@ -38,4 +38,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+var server = app.listen(9000,function(){    /*监听端口*/
+    var host = server.address().address;
+    var port = server.address().port; 
+    console.log('example app listening at http://%s:%s',host,port);  /*控制台输出*/
+});
+
 module.exports = app;
